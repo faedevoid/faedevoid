@@ -1,0 +1,6 @@
+SELECT *
+FROM dex.trades
+WHERE blockchain = 'polygon'
+AND block_date >= TIMESTAMP '2023-01-03'
+AND (token_bought_address = 0xc2a45fe7d40bcac8369371b08419ddafd3131b4a OR token_sold_address = 0xc2a45fe7d40bcac8369371b08419ddafd3131b4a)
+ORDER BY block_time DESC
